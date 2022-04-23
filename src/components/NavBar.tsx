@@ -1,9 +1,6 @@
 import AppBar from "@material-ui/core/AppBar";
 import Grid from "@material-ui/core/Grid";
-import idkNetworkLogo from "../resources/images/network.png";
-import idkLogo from "../resources/images/idkBlackLogo.png";
-import fiveLogo from "../resources/images/over500.png";
-import twoHourLogo from "../resources/images/2HLB-full.png";
+import blackLogo from "../resources/images/BlackLogo.png";
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import Idk from "../routes/Idk";
@@ -46,41 +43,19 @@ export default function NavBar() {
             alignItems="center"
             className={classes.navGridItem}
           >
-            <Link to={"/Home"}>
+            {/* <Link to={"/Home"}>
               <img
-                src={idkNetworkLogo}
+                src={blackLogo}
                 className={classes.networkImg}
                 alt="IDK Network Logo"
               />
-            </Link>
+            </Link> */}
             {/* Second Button */}
-            <Link to={"/Idk"}>
-              <img
-                src={idkLogo}
-                className={classes.networkImg}
-                alt="IDKThat's Perfect Logo"
-              />
-            </Link>
-            {/* Third Button */}
-            <Link to={"/Over500"}>
-              <img
-                src={fiveLogo}
-                className={classes.networkImg}
-                alt="Over 500 Logo"
-              />
-            </Link>
-            {/* Fourth Button */}
-            <Link to={"/2HourLunchBreak"}>
-              <img
-                src={twoHourLogo}
-                className={classes.networkImg}
-                alt="2Hour Lunch Break Logo"
-              />
-            </Link>
+
           </Grid>
         </Grid>
         <Switch>
-        <Route path="/2HourLunchBreak">
+        {/* <Route path="/2HourLunchBreak">
             <Thlb />
           </Route>
           <Route path="/Idk">
@@ -88,7 +63,7 @@ export default function NavBar() {
           </Route>
           <Route path="/Over500">
             <Over500 />
-          </Route>
+          </Route> */}
           <Route path="/">
             <Landing />
           </Route>
