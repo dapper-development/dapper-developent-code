@@ -18,7 +18,7 @@ function Landing() {
         flexGrow: 1,
       },
       ImgSet: {
-        maxWidth: '16%',
+        maxWidth: '33%',
         margin: '5em'
 
       },
@@ -41,7 +41,8 @@ function Landing() {
       },
       subTitleText: {
         color: 'white',
-        marginBottom: '5em',
+        marginBottom: '1em',
+        paddingBottom: '1em'
 
       },
     })
