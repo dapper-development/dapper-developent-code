@@ -1,9 +1,11 @@
 import React from "react";
 import "../App.css";
-import Idk from "../routes/Idk";
-import Over500 from "../routes/Over500";
-import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import BlackLogo from "../resources/images/BlackLogo.png";
+
+
+import BlackLogo from "../resources/images/MainLogo.png";
+import idk from "../resources/images/network.png";
+import set from "../resources/images/set.png";
+
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
 
@@ -12,12 +14,17 @@ function Landing() {
   const useStyles = makeStyles(() =>
     createStyles({
       navBar: {
-       
+
         flexGrow: 1,
+      },
+      ImgSet: {
+        maxWidth: '16%',
+        margin: '5em'
+
       },
       Img: {
         maxWidth: '20%',
-
+        margin: '5em'
       },
       Mainimg: {
         paddingBottom: "1em",
@@ -34,6 +41,7 @@ function Landing() {
       },
       subTitleText: {
         color: 'white',
+        marginBottom: '5em',
 
       },
     })
@@ -41,13 +49,21 @@ function Landing() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <div style={{ textAlign: 'center', }} >
+      <div style={{ textAlign: 'center', marginTop: "5em" }} >
+      <a
+          
+          rel={"noreferrer"}
+          style={{ textDecoration: "none", color: "white", }}
+          href="https://dapperdevelopment.net/"
+
+        >
+
         <img
           src={BlackLogo}
           className={classes.Mainimg}
           alt="dapperEyes"
         />
-      </div>
+        </a>
       <Grid
         container
         spacing={1}
@@ -55,37 +71,50 @@ function Landing() {
         justifyContent="center"
         alignItems="center"
         alignContent="center"
-        wrap="nowrap"
-      >
-        <Typography className="titleText" variant="h1" >
-          Dapper Development
-        </Typography>
-      </Grid>
-      <Grid
-        container
-        spacing={1}
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        alignContent="center"
-        wrap="nowrap"
+       
 
       >
-        <Typography className="subTitleText" variant="h5" >
-          Victor Jaimes-Puente
-        </Typography>
       </Grid>
+
+      
+      <Grid
+        container
+        spacing={1}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        alignContent="center"
+       
+
+      >
+        <a
+          target={"_blank"}
+          rel={"noreferrer"}
+          style={{ textDecoration: "none", color: "white", }}
+          href="https://portfolio-idk.dapperdevelopment.net"
+
+        >
+          <img src={idk} className={classes.Img} alt="idk" />
+        </a>
+
+
+
+        <a
+          target={"_blank"}
+          rel={"noreferrer"}
+          style={{ textDecoration: "none", color: "white", }}
+          href="https://portfolio-set.dapperdevelopment.net/"
+
+        >
+          <img src={set} className={classes.ImgSet} alt="set" />
+        </a>
+      </Grid>
+        <Typography className="subTitleText" variant="h5" >
+         Designed, Developed, Tested, and Deployed by: Victor Jaimes-Puente
+        </Typography>
+      </div>
     </React.Fragment>
   );
 }
 
 export default Landing;
-
-        // <Link style={{ textDecoration: 'none', }} to={"/Idk"}>
-        //   {/* <h1 style={{ color: 'white', textAlign: 'center', }} >IDK That's Perfect</h1> */}
-        //   <img
-        //     src={dapperEyes}
-        //     className={classes.Img}
-        //     alt="IDKThat's Perfect Logo"
-        //   />
-        // </Link>
