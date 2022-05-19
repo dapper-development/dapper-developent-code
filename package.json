@@ -19,6 +19,7 @@
     "react-visibility-sensor": "^5.1.1",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
+    
   },
   "scripts": {
     "start": "react-scripts start",

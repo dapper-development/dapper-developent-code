@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css";
+import IDKFULL from './idk/components/App'
 
 
 import BlackLogo from "../resources/images/MainLogo.png";
@@ -8,6 +9,8 @@ import set from "../resources/images/set.png";
 
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
+import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 
 // End of imorts
 function Landing() {
@@ -50,33 +53,26 @@ function Landing() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <div style={{ textAlign: 'center', marginTop: "5em" }} >
-      <a
-          
-          rel={"noreferrer"}
-          style={{ textDecoration: "none", color: "white", }}
-          href="https://dapperdevelopment.net/"
 
-        >
-
-        <img
-          src={BlackLogo}
-          className={classes.Mainimg}
-          alt="dapperEyes"
-        />
-        </a>
-      <Grid
+<Grid
         container
         spacing={1}
         direction="row"
         justifyContent="center"
         alignItems="center"
         alignContent="center"
-       
+        wrap="nowrap"
 
       >
+        <Link style={{ textDecoration: 'none', }} to={"/Idk-full"}>
+          {/* <h1 style={{ color: 'white', textAlign: 'center', }} >IDK That's Perfect</h1> */}
+          <img
+            src={idk}
+            className={classes.Img}
+            alt="IDKThat's Perfect Logo"
+          />
+        </Link>
       </Grid>
-
       
       <Grid
         container
@@ -88,34 +84,12 @@ function Landing() {
        
 
       >
-        <a
-          target={"_blank"}
-          rel={"noreferrer"}
-          style={{ textDecoration: "none", color: "white", }}
-          href="https://portfolio-idk.dapperdevelopment.net"
 
-        >
-          <img src={idk} className={classes.Img} alt="idk" />
-        </a>
-
-
-
-        <a
-          target={"_blank"}
-          rel={"noreferrer"}
-          style={{ textDecoration: "none", color: "white", }}
-          href="https://portfolio-set.dapperdevelopment.net/"
-
-        >
-          <img src={set} className={classes.ImgSet} alt="set" />
-        </a>
       </Grid>
-        <Typography className="subTitleText" variant="h5" >
-         Designed, Developed, Tested, and Deployed by: Victor Jaimes-Puente
-        </Typography>
-      </div>
+    
     </React.Fragment>
   );
+
 }
 
 export default Landing;

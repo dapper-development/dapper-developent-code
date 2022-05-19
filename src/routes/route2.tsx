@@ -40,11 +40,12 @@ function Thlb() {
         style={{ textAlign: "center", maxWidth: '66%', margin: 'auto', }}
       >
         {/* MAIN-IMAGE */}
-                  <img
+                  {/* <img
             src={thlbLogo}
             className={classes.Mainimg}
             alt="IDK Network Logo"
-          />      </Grid>
+          />      */}
+           </Grid>
       {/* MAIN-IMAGE */}
       <Grid style={{ textAlign: "center" }}>
         {/* INTRO */}
