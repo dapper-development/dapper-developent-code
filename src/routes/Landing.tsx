@@ -9,7 +9,6 @@ import set from "../resources/images/set.png";
 
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
-import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 
 // End of imorts
@@ -72,6 +71,14 @@ function Landing() {
             alt="IDKThat's Perfect Logo"
           />
         </Link>
+        <Link style={{ textDecoration: 'none', }} to={"/Set-full"}>
+          {/* <h1 style={{ color: 'white', textAlign: 'center', }} >IDK That's Perfect</h1> */}
+          <img
+            src={set}
+            className={classes.Img}
+            alt="SET Logo"
+          />
+        </Link>
       </Grid>
       
       <Grid
@@ -84,7 +91,6 @@ function Landing() {
        
 
       >
-
       </Grid>
     
     </React.Fragment>

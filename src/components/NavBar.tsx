@@ -6,7 +6,8 @@ import { createStyles, makeStyles } from "@material-ui/core/styles";
 import IDKFULL from "../routes/idk/components/App";
 import Landing from "../routes/Landing";
 import Over500 from "../routes/route3";
-import Thlb from "../routes/route2";
+import SetFull from '../routes/set/components/App';
+
 
 // Function for Navbar
 export default function NavBar() {
@@ -55,8 +56,8 @@ export default function NavBar() {
           </Grid>
         </Grid>
         <Switch>
-        <Route path="/2HourLunchBreak">
-            <Thlb />
+        <Route path="/Set-Full">
+            <SetFull />
           </Route>
           <Route path="/Idk-Full">
             <IDKFULL />
