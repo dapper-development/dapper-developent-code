@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
-import Idk from "./Idk";
-import Over500 from "./Over500";
+
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import idkLogo from "../resources/images/idkBlackLogo.png";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
@@ -9,7 +8,6 @@ import { Grid, Typography } from "@material-ui/core";
 import idkNetworkLogo from "../resources/images/network.png";
 import fiveLogo from "../resources/images/over500.png";
 import twoHourLogo from "../resources/images/2HLB-full.png";
-import Footer from "../components/Footer";
 // End of imorts
 function Landing() {
   const useStyles = makeStyles(() =>
@@ -116,8 +114,7 @@ function Landing() {
         </Link>
       </Grid>
         </div>
-      <Footer />
-    </React.Fragment>
+\    </React.Fragment>
   );
 }
 

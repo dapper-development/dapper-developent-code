@@ -5,8 +5,8 @@ import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import IDKFULL from "../routes/idk/components/App";
 import Landing from "../routes/Landing";
-import Over500 from "../routes/route3";
 import SetFull from '../routes/set/components/App';
+import Resume from "../routes/Resume";
 
 
 // Function for Navbar
@@ -17,8 +17,8 @@ export default function NavBar() {
         backgroundColor: "black",
         flexGrow: 1,
       },
-      networkImg: {
-        height: "3em",
+      navImg: {
+        height: "6em",
         marginLeft: "auto",
         marginRight: "auto",
         marginBottom: ".25em",
@@ -47,7 +47,7 @@ export default function NavBar() {
             <Link to={"/"}>
               <img
                 src={blackLogo}
-                className={classes.networkImg}
+                className={classes.navImg}
                 alt="IDK Network Logo"
               />
             </Link> 
@@ -56,14 +56,14 @@ export default function NavBar() {
           </Grid>
         </Grid>
         <Switch>
+        <Route path="/Resume">
+            <Resume />
+          </Route>
         <Route path="/Set-Full">
             <SetFull />
           </Route>
           <Route path="/Idk-Full">
             <IDKFULL />
-          </Route>
-          <Route path="/Over500">
-            <Over500 />
           </Route>
           <Route path="/">
             <Landing />
