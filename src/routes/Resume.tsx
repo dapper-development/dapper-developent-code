@@ -15,22 +15,33 @@ function Resume() {
   const useStyles = makeStyles(() =>
     createStyles({
       // STYLING
+      mainDiv: {
+        margin: 'auto',
+        width: '66%',
+        textAlign: 'center',
+
+      },
       title: {
         color: 'white',
         textAlign: 'center',
         fontWeight: 'bold',
+        maring:'.5em',
       },
       subTitle: {
         fontSize: '1em',
         textAlign: 'center',
         fontWeight: 'bold',
         margin: '.5em',
+
+       
       },
       body: {
         fontSize: '.7em',
         textAlign: 'center',
         margin: '.5em',
+
       }
+
     })
   );
   // STYLING
@@ -45,7 +56,7 @@ function Resume() {
         justifyContent="center"
         alignItems="center"
         alignContent="center"
-        wrap="wrap"
+        className={classes.mainDiv}
       >
         <Typography variant="h5" className={classes.title} >
           Victor Jaimes-Puente
@@ -88,22 +99,19 @@ function Resume() {
           Organized and instructed over seventy two job oriented classes to groups of up to thirty personnel over a twenty four month period.
           Supervised up to ten personnel in over fifty high stress, highly adverse operations with zero percent failure or loss.  Oversaw all aspects of my soldiers lives which included finances, basic survival needs, identifying learning styles, individual attitudes, psychological state of mind, physical and mental abilities all with the purpose of developing an elite soldier.
         </Typography>
-        <br />
-        <br></br>
-        <Typography variant="h5" className={classes.title} >
-          Skills + Specialization        </Typography>
-        <br></br>
-        <Typography className={classes.body} >
+        <br></br>        
+        <Typography variant="h5"  className={classes.title} >
+          Skills + Specialization        
+          </Typography>
+          <br></br>
+        <Typography className={classes.body}  display="block">
           Agile, SCRUM,Javascript, Typescript, Node, React, HTML, CSS, Redux
-          <br />
-          API creation + implementation, Java, Spring Boot, MySQL, NestJS, MongoDB,
-          <br />
-          Cloud Architecture, Deployment Automation, AWS, Google Cloud, Azure, Cloud & Local Networking, Cloud + Local Hosting
+          ,API creation + implementation, Java, Spring Boot, MySQL, NestJS, MongoDB,
+          ,Cloud Architecture, Deployment Automation, AWS, Google Cloud, Azure, Cloud + Local Networking, Cloud + Local Hosting
         </Typography>
-        <br />
         <br></br>
-        <Typography variant="h5" className={classes.title} >
-          Education         </Typography>
+        <Typography variant="h5"  className={classes.title} >
+          Education</Typography>
         <br></br>
         <Typography variant="h5" className={classes.subTitle} >
         Alamo Colleges 2020 - Presently Enrolled         </Typography>
@@ -112,10 +120,18 @@ function Resume() {
           Associate's Degree, Cloud Networking
           San Antonio
         </Typography>
-        <br />
-        <Typography variant="h5" className={classes.title} >
-        Licenses + Certifications
+        <br></br>    
+             <Grid  
+              container
+              spacing={1}
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              alignContent="center">
+        <Typography variant="h5" display="block" className={classes.title} >
+        Licenses + Certifications 
          </Typography>
+         </Grid>
         <br></br>
         <Typography className={classes.subTitle} >
         Codeup 2020, Full-stack Web Development
@@ -123,8 +139,7 @@ function Resume() {
         <Typography className={classes.body} >
         6 months, 40 hour weeks of coding. Full-stack Web Development in LAMP stack. 
         </Typography>
-        <br />
-      </Grid>
+        <br></br>      </Grid>
 
     </React.Fragment>
   );
