@@ -12,8 +12,8 @@ function Landing() {
   const useStyles = makeStyles(() =>
     createStyles({
       Img: {
-       height: '3em',
-       margin: '1em',
+       height: '7em',
+       margin: '5em',
       },
       title: {
         color: 'white',
@@ -59,6 +59,7 @@ function Landing() {
        
         <Link style={{ textDecoration: 'none', }} to={"/Set-full"}>
           <img
+            style={{height: '5.5em'}}
             src={set}
             className={classes.Img}
             alt="SET Logo"

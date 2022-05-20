@@ -18,7 +18,7 @@ export default function NavBar() {
         flexGrow: 1,
       },
       navImg: {
-        height: "6em",
+        height: '15em',
         marginLeft: "auto",
         marginRight: "auto",
         marginBottom: ".25em",
