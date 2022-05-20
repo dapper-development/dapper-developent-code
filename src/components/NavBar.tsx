@@ -21,7 +21,7 @@ export default function NavBar() {
         height: '15em',
         marginLeft: "auto",
         marginRight: "auto",
-        marginBottom: ".25em",
+        // marginBottom: ".25em",
         marginTop: ".25em",
       },
       gridContainer: {
