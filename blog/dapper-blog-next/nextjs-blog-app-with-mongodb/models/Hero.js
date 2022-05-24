@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+import {mongoose, module } from "mongoose"
 
 const HeroSchema = new mongoose.Schema({
     superHero: {
         type: String,
         required: [true, 'Please name the hero'],
         unique: true, 
-        trim: 'true'
+        trim: true
     
     },
     realName: {
@@ -15,4 +15,5 @@ const HeroSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model.Hero || mongoose.model('Hero', HeroSchema)
+module.exports = mongoose.model.HeroSchema
+
